@@ -1,23 +1,13 @@
-import Navbar from "./components/Navbar";
-import DayCalendar from "./components/DayCalendar";
+import Navbar from './components/Navbar';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
-
-      <main className="p-4 flex flex-col md:flex-row gap-4">
-        {/* Lewa kolumna: Kalendarz dnia */}
-        <DayCalendar />
-
-        {/* Prawa kolumna: Notatka dnia (wkrótce) */}
-        <div className="bg-white shadow-md rounded-lg p-4 w-full md:w-1/2">
-          <h2 className="text-lg font-semibold text-black">📝 Notatka dnia</h2>
-          <p className="text-gray-600">Tutaj będzie notatka dnia.</p>
-        </div>
+      <main className="flex-1 p-4">
+        <h1 className="text-2xl font-bold">Witaj w aplikacji Calendar-Notes!</h1>
+        <p className="mt-2 text-gray-600">Tutaj pojawią się notatki i kalendarz.</p>
       </main>
     </div>
   );
 }
-
-export default App;
